@@ -17,10 +17,9 @@
         </div>
         <div class="nav-items">
           <a href="../../index.html">Home</a>
-          <a href="#">Login</a>
-          <a href="../signup/index.html">Signup</a>
+          <a href="../login/index.html">Login</a>
+          <a href="#">Signup</a>
           <a href="#">My Cart</a>
-          <a href="../../profile/index.html">Profile</a>
         </div>
       </nav>      
   </div>
@@ -29,7 +28,7 @@
   <div class="signup" id="signup">
     <div class="signup-container">
         
-        <form id="signup-form">
+        <form id="signup-form" action="../login/index.html">
             <h2>Sign Up</h2>
             <div class="form-group" onsubmit="return validateForm()">
                 <input type="text" id="first-name" name="first_name" placeholder="First Name" required>
@@ -46,7 +45,7 @@
             <div class="form-group">
                 <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm Password" required>
             </div>
-            <button class="submit-signup submit" type="submit">Sign Up</button>
+            <button class="submit-signup" type="submit">Sign Up</button>
         </form>
     </div>
   </div>
