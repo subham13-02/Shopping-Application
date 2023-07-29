@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>MeShop.</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header" id="header">
+      <nav>
+        <div class="brand">
+          <a href="/">MeShop.</a>
+        </div>
+        <div class="nav-items">
+          <a href="../../index.html">Home</a>
+          <a href="#">Login</a>
+          <a href="../signup/index.html">Signup</a>
+          <a href="#">My Cart</a>
+          <a href="../../profile/index.html">Profile</a>
+        </div>
+      </nav>      
+  </div>
+
+  <!--signup page-->
+  <div class="signup" id="signup">
+    <div class="signup-container">
+        
+        <form id="signup-form">
+            <h2>Sign Up</h2>
+            <div class="form-group" onsubmit="return validateForm()">
+                <input type="text" id="first-name" name="first_name" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="last-name" name="last_name" placeholder="Last Name"required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm Password" required>
+            </div>
+            <button class="submit-signup submit" type="submit">Sign Up</button>
+        </form>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>MeShop.</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header" id="header">
+      <nav>
+        <div class="brand">
+          <a href="/">MeShop.</a>
+        </div>
+        <div class="nav-items">
+          <a href="../shop/index.html">Home</a>
+          <a href="../public/login/index.html">Login</a>
+          <a href="../public/signup/index.html">Signup</a>
+          <a href="../cart/index.html">My Cart</a>
+          <a href="#">Profile</a>
+        </div>
+      </nav>      
+    </div>
+
+  <!-- Profile Page -->
+  <div class="profile">
+    <div class="profile-container">
+        
+        <div class="info">
+          <div><h1>My Profile</h1></div>
+          <form id="change-info">
+            <input type="text" id="firstName" placeholder="First Name" required>
+            <input type="text" id="lastName" placeholder="Last Name" required>
+            <button type="submit" class="submit-profile">Save info</button>
+          </form>
+        </div>
+        
+        <div class="pass">
+          <div><h1>Edit Password</h1></div>
+          <form id="change-password">
+            <input type="password" id="currentPassword" placeholder="Current Password" required>
+            <input type="password" id="newPassword"  placeholder="New Password" required>
+            <input type="password" id="confirmPassword"  placeholder="Confirm Password" required>
+            <button type="submit" class="submit-profile">Save Changes</button>
+          </form>
+        </div>
+
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+  </body>
+</html>
+
