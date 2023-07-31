@@ -69,3 +69,6 @@ input{
     padding: 0.5rem 2rem;
     margin: 1rem 0;
 }
+.login-msg{
+  color:red;
+}

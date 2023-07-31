@@ -10,6 +10,9 @@ signup.addEventListener('submit',(event)=>{
     let msg=document.querySelector(".signup-msg");
 
     let userData=new Array();
+    userData=JSON.parse(localStorage.getItem("user"))?JSON.parse(localStorage.getItem("user")):[];
+
+
     if(fname==""||lname==""||password==""){
         msg.innerHTML=`All the data are compulsory to fill*`;
         signup.reset();
@@ -17,8 +20,6 @@ signup.addEventListener('submit',(event)=>{
     }
 
     if(signup.elements['password'].value.trim()===signup.elements['confirm-password'].value.trim()){
-        userData=JSON.parse(localStorage.getItem("user"))?JSON.parse(localStorage.getItem("user")):[];
-        
         if(userData.some((e)=>{return e.email==email})){
             msg.innerHTML=`This Email id Alredy Excist*`;
         }
@@ -30,7 +31,8 @@ signup.addEventListener('submit',(event)=>{
                 "password":password,
             });
             localStorage.setItem("user",JSON.stringify(userData));
-            msg.innerHTML=`<h4>Signup Sucessful !</h2>`;
+            msg.style.color="green";
+            msg.innerHTML=`<h2>Signup Successful !</h2>`;
             signup.reset();
         }
         
