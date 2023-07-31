@@ -7,7 +7,6 @@
 }
 body {
     font-family: "Inter", sans-serif;
-    overflow-x: hidden;
   }
   
 
@@ -43,27 +42,37 @@ body {
 
 /* <-----SignUp Page-----> */
 .signup{
-    display: block;
+    height: 100vh;
+    width: 100%;
 }
 .signup-container{
     display: flex;
-    justify-content: center ;
-    
+    align-items: center;
+    justify-content: center;
+    width:100%;
 }
 #signup-form{
     margin-top: 8rem;
-    width:95%;
+    width:90%;
+    
+}
+.signup-msg{
+  color:red;
 }
 input{
-    width: 90%;
+    width: 100%;
     height: 2rem;
-    padding: 0.5rem 2rem;
+    font-size: 1.1rem;
+    padding: 1.2rem 1.5rem;
     margin: 0.8rem 0;
 }
-.submit-signup{
+.btn{
     background-color: black;
     color: white;
     padding:0.5rem 3rem;
     margin:0 2rem 0 0;
     cursor: pointer;
+}
+.login-btn{
+  display:none;
 }

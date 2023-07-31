@@ -27,10 +27,11 @@
   <!--signup page-->
   <div class="signup" id="signup">
     <div class="signup-container">
-        
-        <form id="signup-form" action="../login/index.html">
+        <form id="signup-form">
             <h2>Sign Up</h2>
-            <div class="form-group" onsubmit="return validateForm()">
+            </br>
+            <div class="signup-msg"></div>
+            <div class="form-group">
                 <input type="text" id="first-name" name="first_name" placeholder="First Name" required>
             </div>
             <div class="form-group">
@@ -45,7 +46,10 @@
             <div class="form-group">
                 <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm Password" required>
             </div>
-            <button class="submit-signup" type="submit">Sign Up</button>
+            <div class="form-group">
+              <button class="signup-btn btn" type="submit">Sign Up</button>
+              <button class="login-btn btn" >Login Up</button>
+            </div>
         </form>
     </div>
   </div>
@@ -53,4 +57,3 @@
   <script src="./script.js"></script>
   </body>
 </html>
-
