@@ -64,18 +64,16 @@ nav .nav-items a {
 }
 .home-container{
     display:flex;
-    justify-content: space-between;
+    gap:1rem;
     padding:0 5rem;
 }
 .btns>a{
     background-color: black;
     color: white;
     padding:0.5rem 3rem;
-    margin:0 2rem 0 0;
     cursor: pointer;
 }
 .home-img{
     width:60%;
     height:60%;
-    
 }

@@ -17,8 +17,7 @@
         </div>
         <div class="nav-items">
           <a href="../shop/index.html">Home</a>
-          <a href="../public/login/index.html">Login</a>
-          <a href="../public/signup/index.html">Signup</a>
+          <a href="../index.html">Logout</a>
           <a href="../cart/index.html">My Cart</a>
           <a href="#">Profile</a>
         </div>
@@ -28,25 +27,29 @@
   <!-- Profile Page -->
   <div class="profile">
     <div class="profile-container">
-        
-        <div class="info">
-          <div><h1>My Profile</h1></div>
-          <form id="change-info">
-            <input type="text" id="firstName" placeholder="First Name" required>
-            <input type="text" id="lastName" placeholder="Last Name" required>
+      <div class="user-info" id="user-info">
+        <div><h1>My Profile</h1></div></br>      
+      </div>
+      
+      <div class="info">
+        <form id="change-info">
+            <div><h1>Edit Profile</h1></div>
+            <input type="text" id="fname" placeholder="First Name" >
+            <input type="text" id="lname" placeholder="Last Name" >
             <button type="submit" class="submit-profile">Save info</button>
-          </form>
-        </div>
+        </form>
+      </div>
         
-        <div class="pass">
-          <div><h1>Edit Password</h1></div>
-          <form id="change-password">
+      <div class="pass">
+        <form id="change-password">
+            <div><h1>Edit Password</h1></div>
+            <div class="edit-msg"></div>
             <input type="password" id="currentPassword" placeholder="Current Password" required>
             <input type="password" id="newPassword"  placeholder="New Password" required>
             <input type="password" id="confirmPassword"  placeholder="Confirm Password" required>
             <button type="submit" class="submit-profile">Save Changes</button>
-          </form>
-        </div>
+        </form>
+       </div>
 
     </div>
   </div>

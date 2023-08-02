@@ -11,8 +11,9 @@ login.addEventListener('submit',(event)=>{
 
     let msg=document.querySelector(".login-msg");
     if(userData.some((e)=>{return e.email==email && e.password==password})){
-        msg.style.color="green";
         msg.innerHTML=`Login Successful!`;
+        let currentUser=userData.filter((v)=>{return v.email==email && v.password==password})[0];
+        localStorage.setItem('currentUser', currentUser.email);  
         window.location.href="../../shop/index.html";
     }
     else{

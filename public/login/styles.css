@@ -43,31 +43,35 @@ body {
 /* <-----Login Page-----> */
 
 .login{
-    display: block;
+    width:100%;
+    height:100vh;
 }
 
 .login-container{
-    display: flex;
-    justify-content: center ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:100%;
 }
 
 #login-form{
-    margin-top: 8rem;
-    width:95%;
+  margin-top: 8rem;
+  width:90%;
 }
 
 .submit-login{
-    background-color: black;
-    color: white;
-    padding:0.5rem 3rem;
-    margin:0 2rem 0 0;
-    cursor: pointer;
+  background-color: black;
+  color: white;
+  padding:0.5rem 3rem;
+  margin:0 2rem 0 0;
+  cursor: pointer;
 }
 input{
-    width: 90%;
+    width: 100%;
     height: 2rem;
-    padding: 0.5rem 2rem;
-    margin: 1rem 0;
+    font-size: 1.1rem;
+    padding: 1.2rem 1.5rem;
+    margin: 0.8rem 0;
 }
 .login-msg{
   color:red;
