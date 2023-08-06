@@ -38,10 +38,10 @@ nav {
   justify-content: space-between;
   align-items: center;
   color: white;
-  position: sticky;
+  position: fixed;
   z-index: 100;
   top: 0;
-
+  width: 100%;
   background-color: black;
   border-bottom: 1px solid white;
   padding: 1rem;
@@ -103,7 +103,7 @@ aside section label {
 }
 
 main-content {
-  padding: 1rem;
+  padding: 5rem 1rem;
   position: relative;
 }
 
@@ -143,22 +143,27 @@ main-content section title {
 }
 
 main-content .items {
+  
+  height: 550px;
   display: flex;
   width: auto;
-  overflow-x: scroll;
+  overflow-x:scroll;
   padding: 1rem 0;
   gap: 1rem;
 }
-
-main-content .items .item {
+.item {
+  width: 242px;
+  height: 500px;
   border: 1px solid black;
-  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
-main-content .items .item img {
-  max-width: 100%;
+img{
+  width:238px;
+  height:260px;
+  object-fit: fill ;
 }
-
 main-content .items .item .row {
   display: flex;
   justify-content: space-between;
@@ -172,11 +177,12 @@ main-content .items .item button {
   width: 100%;
   border-radius: none;
   border: none;
-  padding: 1rem;
+  padding: 0.5rem;
   font-size: 1rem;
   color: white;
   background-color: black;
   cursor: pointer;
+
 }
 
 main-content .items .item .colors {

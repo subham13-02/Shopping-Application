@@ -1,8 +1,8 @@
 const user=JSON.parse(localStorage.getItem("user"));
 
 const current_email=localStorage.getItem("currentUser");
-let ct=0,c;
-const current_user=user.filter((e)=>{if(e.email==current_email) c=ct;else ct++;return e.email==current_email})[0];
+let index;
+const current_user=user.filter((e,i)=>{if(e.email==current_email) index=i;else ct++;return e.email==current_email})[0];
 
 const user_info=document.getElementById("user-info");
 
