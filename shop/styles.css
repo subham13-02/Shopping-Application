@@ -101,7 +101,17 @@ aside section label {
   cursor: pointer;
   margin-left: 0.25rem;
 }
+aside .btn{
+  width: 100%;
+  border-radius: none;
+  border: 1px solid white;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: white;
+  background-color: black;
+  cursor: pointer;
 
+}
 main-content {
   padding: 5rem 1rem;
   position: relative;
@@ -144,7 +154,7 @@ main-content section title {
 
 main-content .items {
   
-  height: 550px;
+  height: 530px;
   display: flex;
   width: auto;
   overflow-x:scroll;
