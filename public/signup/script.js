@@ -31,7 +31,8 @@ signup.addEventListener('submit',(event)=>{
                 "password":password,
             });
             localStorage.setItem("user",JSON.stringify(userData));
-            msg.innerHTML=`<h2>Signup Successful !</h2>`;
+            msg.innerHTML='';
+            alert(`Signup Successful!`);
             signup.reset();
         }
         

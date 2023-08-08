@@ -1,5 +1,5 @@
 const url='https://fakestoreapi.com/products';
-const colors=["#000080"," #800000","#008000","#808080","#000000"];
+const colors= ["#000080"," #800000","#008000","#808080","#000000"];
 
 fetchProducts();
 async function fetchProducts(){

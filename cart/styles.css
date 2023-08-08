@@ -94,7 +94,7 @@ a {
   .info {
     padding: 1rem;
   }
-  button {
+  #removeBtn{
     width: 100%;
     border-radius: none;
     border: none;
@@ -103,7 +103,6 @@ a {
     color: white;
     background-color: black;
     cursor: pointer;
-  
   }
   
  .colors {
@@ -117,13 +116,48 @@ a {
     border-radius: 100%;
     margin: 0 5px;
   }  
-  #cartPrice{
+
+/*------------ Cart-Checkout -----------*/
+
+  #cartBill{
     background-color: black;
     color:white;
     min-height: 40vh;
-    min-width: 25%;
-    max-width:30%;
+    width:30%;
     padding:0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #billContainer{
+    width:100%;
+  }
+  .checkOutItems{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+  }
+  .itemName{
+    width:70%
+  }
+  .totalBill{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-top:1px solid white;
+    border-bottom:1px solid white;
+  }
+  .checkOut{
+    width: 100%;
+    border-radius: none;
+    /* border: 1px solid black;
+    outline: 1px solid white; */
+    padding: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
   }
 
-  /*------------ Cart-Checkout -----------*/
+  
+

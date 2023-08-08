@@ -1,6 +1,8 @@
 // Link for the documentation:
 // https://razorpay.com/docs/payments/payment-gateway/web-integration/standard/build-integration
 
+// rzp_test_PV1oQ0oMtgXOsq
+
 // Add button code documentation:
 // https://razorpay.com/docs/payments/payment-gateway/web-integration/standard/build-integration#code-to-add-pay-button
 

@@ -1,15 +1,17 @@
 const user=JSON.parse(localStorage.getItem("user"));
 
 const current_email=localStorage.getItem("currentUser");
-let index;
-const current_user=user.filter((e,i)=>{if(e.email==current_email) index=i;else ct++;return e.email==current_email})[0];
-
+let currIndex;
+const current_user=user.filter((e,i)=>{if(e.email==current_email) currIndex=i;return e.email==current_email})[0];
+console.log(currIndex);
 const user_info=document.getElementById("user-info");
 
 //Profile Display....
 let display=document.createElement('div');
 display.style.color="grey"
-display.innerHTML=`<b>Name: ${current_user.fname}  ${current_user.lname}</b></br>
+display.innerHTML=`
+
+<b>Name: ${current_user.fname.toUpperCase()}  ${current_user.lname.toUpperCase()}</b></br>
 <b>Email:  ${current_user.email}</b>`;
 
 user_info.appendChild(display);
@@ -24,10 +26,10 @@ addEventListener("submit",(e)=>{
     let new_lname=change_info.elements['lname'].value.trim();
     if(new_fname!=="" || new_lname!==""){
         if(new_fname!==""){
-            user[c].fname=new_fname;
+            user[currIndex].fname=new_fname;
         }
         if(new_lname!==""){
-            user[c].lname=new_lname;
+            user[currIndex].lname=new_lname;
         }
         localStorage.setItem('user',JSON.stringify(user));
         location.reload();
@@ -48,9 +50,10 @@ addEventListener("submit",(e)=>{
     if(currentPassword===current_user.password){
         if(confirmPassword===newPassword){
             if(newPassword!==currentPassword){
-                user[c].password=newPassword;
+                user[currIndex].password=newPassword;
                 localStorage.setItem('user',JSON.stringify(user));
-                msg.innerHTML=`Password changed Successfully!`;
+                msg.innerHTML='';
+                blurt('hlo',`Password Changed Successfully!`);
                 change_pass.reset();
             }
             else{
