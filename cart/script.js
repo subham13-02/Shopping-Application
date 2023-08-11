@@ -57,7 +57,7 @@ function itemCard(item){
           <div class="rater" style="color:grey">${item.rating.count}</div>
         </div>
       </div>
-      <button id="removeBtn" onclick="removeFromCart(${item.id})">Remove From Cart</button>`;
+      <button id="removeBtn" class="btn" onclick="removeFromCart(${item.id})">Remove From Cart</button>`;
       cartContainer.appendChild(card);
 
 
@@ -85,8 +85,15 @@ function randomColor(){
 function removeFromCart(id){
     let cartItem=new Array;
     cartItem=JSON.parse(localStorage.getItem('cartId'))?JSON.parse(localStorage.getItem('cartId')):[];
-    
-    let finalItem=cartItem.filter((item)=>{return item!==id});
+    let notRemoved=true;
+
+    let finalItem=cartItem.filter((item)=>{
+      if(item===id && notRemoved){
+        notRemoved=false;
+        return false;
+      }
+      return true;
+    });
     localStorage.setItem('cartId',JSON.stringify(finalItem));
     location.reload();
 }

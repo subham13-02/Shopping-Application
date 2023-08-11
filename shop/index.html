@@ -120,34 +120,50 @@
 <!-- Product Cards -->
       <main-content>
         <input type="text" placeholder="Search" />
-        <div class="filters">
-          <div class="filter active">All</div>
-          <div class="filter">Mens</div>
+        <div class="filters" id="filters">
+          <button class="filter active" id="all">All</button>
+          <button class="filter" id="men">Mens</button>
+          <button class="filter" id="women">Womens</button>
+          <button class="filter" id="jewellery">Jewellery</button>
+          <button class="filter" id="electronics">Electronics</button>
+          <!-- <div id="all" class="filter active">All</div>
+          <div id="men" class="filter">Mens</div>
           <div class="filter">Womens</div>
           <div class="filter">Jewellery</div>
-          <div class="filter">Electronics</div>
+          <div class="filter">Electronics</div> -->
         </div>
-        <section>
-          <title>Men's Clothing</title>
-          <div class="items" id="men-items">
+        <all-category>
+          <section id="men" class="containers">
+            <title>Men's Clothing</title>
+            <div class="items" id="men-items">
+            </div>
+          </section>
+  
+          <section id="women" class="containers">
+            <title>Women's Clothing</title>
+            <div class="items" id="women-items"></div>
+          </section>
+  
+          <section id="jewellery" class="containers">
+            <title>Jewellery</title>
+            <div class="items" id="jewellery-items"></div>
+          </section>
+  
+          <section id="electronics" class="containers">
+            <title>Electronics</title>
+            <div class="items" id="electronics-items"></div>
+          </section>
+        </all-category>
+        <filtered-category>
+          <section class="filtered-category">
+
+          </section>
+        </filtered-category>
+        <filtered-search>
+          <section class="searched">
             
-          </div>
-        </section>
-
-        <section>
-          <title>Women's Clothing</title>
-          <div class="items" id="women-items"></div>
-        </section>
-
-        <section>
-          <title>Jewellery</title>
-          <div class="items" id="jewellery-items"></div>
-        </section>
-
-        <section>
-          <title>Electronics</title>
-          <div class="items" id="electronics-items"></div>
-        </section>
+          </section>
+        </filtered-search>
       </main-content>
     </main>
 

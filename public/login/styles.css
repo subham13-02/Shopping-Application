@@ -76,3 +76,6 @@ input{
 .login-msg{
   color:red;
 }
+.btn:active {
+  transform: scale(0.9);
+}

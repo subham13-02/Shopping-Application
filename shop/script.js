@@ -1,17 +1,19 @@
 const url='https://fakestoreapi.com/products';
 const colors= ["#000080"," #800000","#008000","#808080","#000000"];
 
+// ITEMS--------->
+const menItems=document.getElementById("men-items");
+const womenItems=document.getElementById("women-items");
+const jewelleryItems=document.getElementById("jewellery-items");
+const electronicsItems=document.getElementById("electronics-items");
+
+//Fetcing all the Data----->
+
 fetchProducts();
 async function fetchProducts(){
   let response=await fetch(url);
   let data=await response.json();
-  const menItems=document.getElementById("men-items");
-  const womenItems=document.getElementById("women-items");
-  const jewelleryItems=document.getElementById("jewellery-items");
-  const electronicsItems=document.getElementById("electronics-items");
-  
   data.filter((item)=>{
-    const menItems=document.getElementById("men-items");
     // Men's Clothing----->
     if(item.category==="men's clothing"){
       itemCard(menItems,item);
@@ -25,11 +27,41 @@ async function fetchProducts(){
       itemCard(jewelleryItems,item);
     }
     // Electronics Clothing----->
-    if(item.category.includes("electronics")){
+    if(item.category.includes("electronics") ){
       itemCard(electronicsItems,item);
     }
   });
 }
+
+//Category Buttons---->
+
+const buttons = document.querySelectorAll('.filter');
+const containers= document.querySelectorAll('.containers');
+
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Remove active class from all buttons
+      buttons.forEach(btn => {
+        btn.classList.remove('active');
+        containers.forEach(container => {
+          container.classList.add('inactive');
+          if(button.id=="all"){
+            container.classList.remove('inactive');
+          }
+          else if(button.id==container.id){
+            container.classList.remove('inactive');
+            console.log(container.items);
+            // container.style.flexWrap = "wrap";
+          }
+        });
+      });
+      // Add active class to the clicked button
+      button.classList.add('active');
+    });
+});
+
+
 
 function itemCard(category,item){
       card=document.createElement("div");
@@ -59,7 +91,7 @@ function itemCard(category,item){
           <div class="rater" style="color:grey">${item.rating.count}</div>
         </div>
       </div>
-      <button id="addBtn" onclick="addToCart(${item.id})">Add to Cart</button>`;
+      <button id="addBtn" class="btn" onclick="addToCart(${item.id})">Add to Cart</button>`;
     category.appendChild(card);
     function addToCart(){
         console.log(item);
@@ -77,7 +109,6 @@ function addToCart(id){
   cartItem.push(id);
   localStorage.setItem('cartId',JSON.stringify(cartItem));
 }
-
 
 
 

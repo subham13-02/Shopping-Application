@@ -53,7 +53,7 @@ addEventListener("submit",(e)=>{
                 user[currIndex].password=newPassword;
                 localStorage.setItem('user',JSON.stringify(user));
                 msg.innerHTML='';
-                blurt('hlo',`Password Changed Successfully!`);
+                alert(`Password Changed Successfully!`);
                 change_pass.reset();
             }
             else{

@@ -104,7 +104,9 @@ a {
     background-color: black;
     cursor: pointer;
   }
-  
+  .btn:active {
+    transform: scale(0.9);
+}
  .colors {
     display: flex;
     margin: 1rem 0;
