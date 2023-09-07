@@ -55,22 +55,25 @@ nav .nav-items a {
 }
 
 /* <----Landing Page----> */
-.home{
-    display: block;
-}
 
-.about-container{
-    
-    padding:5rem 5rem 2rem 5rem;
+.landing-container{
+    display:flex;
+    padding:5rem 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.about{
+    width: 40%;
+}
+.buttons{
+    margin-top: 1rem;
+    display:flex;
+    gap:1rem;
+    padding:0 5rem;
 }
 .h-name{
     font-size: 4rem;
     padding:1rem 0;
-}
-.home-container{
-    display:flex;
-    gap:1rem;
-    padding:0 5rem;
 }
 .btns>a{
     background-color: black;
@@ -79,10 +82,8 @@ nav .nav-items a {
     cursor: pointer;
     transform:none;
 }
-.home-img{
-    margin-left: 2rem;
-    width:70%;
-    height:70%;
+.landing-img{
+    width:50%;
 }
 .btns>a:active{
     transform: scale(0.9);

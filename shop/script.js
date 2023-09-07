@@ -75,7 +75,7 @@ function itemCard(category,item){
           <b>${item.title}</b>
         </div>
         <div class="row">
-          <div class="price">$ ${item.price}</div>
+          <div class="price">₹ ${item.price*80}</div>
           <div class="sized">S,M,L</div>
         </div>
         <div class="colors">

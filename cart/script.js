@@ -14,22 +14,25 @@ async function fetchProducts(){
   let totalBill=document.querySelector("#totalBill");
   let total=0;
   cartId.forEach((id)=>{
-    data.forEach((item,)=>{
+    data.forEach((item)=>{
         if(id===item.id){
             itemCard(item);
             billItems(item,ct++);
-            total+=item.price;
+            total+=item.price*80;
         }
     });
   });
-  totalBill.innerHTML=`$ ${total}`;
+  totalBill.innerHTML=`₹ ${total}`;
   let payBtn=document.getElementById("checkOut");
+
   payBtn.addEventListener("click",(e)=>{
     e.preventDefault();
     pay(total);
   });
 }
 
+
+//=========DISPLAYING THE ITEMS IN CART===========//
 function itemCard(item){
       card=document.createElement("div");
       card.setAttribute('class','item');
@@ -41,7 +44,7 @@ function itemCard(item){
           <b>${item.title}</b>
         </div>
         <div class="row">
-          <div class="price">$ ${item.price}</div>
+          <div class="price">₹ ${item.price*80}</div>
           <div class="sized">S,M,L</div>
         </div>
         <div class="colors">
@@ -69,13 +72,10 @@ function billItems(item,count){
   billItem.className="checkOutItems";
   billItem.innerHTML=`<div class="slNum">${count}</div>
   <div class="itemName">${item.title}</div>
-  <div class="itemPrice">$ ${item.price}</div>`;
+  <div class="itemPrice">₹ ${item.price *80}</div>`;
   billContainer.appendChild(billItem);
 }
-//-------RazorPay--------
-function pay(total){
-  console.log(total);
-}
+
 
 
 
@@ -96,4 +96,25 @@ function removeFromCart(id){
     });
     localStorage.setItem('cartId',JSON.stringify(finalItem));
     location.reload();
+}
+
+
+//-------RazorPay--------
+function pay(total){
+
+  var options = {
+    key: "rzp_test_iUxeBpCxMVsczd" ,// "rzp_test_PV1oQ0oMtgXOsq", // Enter the Key ID generated from the Dashboard
+    amount: 100*total, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    currency: "INR",
+    name: "MyShop Checkout",
+    description: "This is your order", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    theme: {
+      color: "#000",
+    },
+    image:
+      "https://www.mintformations.co.uk/blog/wp-content/uploads/2020/05/shutterstock_583717939.jpg",
+  };
+
+  var rzpy1 = new Razorpay(options);
+  rzpy1.open();
 }
