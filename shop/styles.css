@@ -83,10 +83,20 @@ main main-content {
   margin-left: 11rem;
   margin-right: 1rem;
 }
-
+aside{
+  padding-top: 4rem;
+  padding-bottom:50vh;
+  height:100vh ;
+  overflow:auto;
+}
+aside::-webkit-scrollbar {
+  width: 0.1em;
+}
 aside section {
   padding: 1rem;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgb(77, 77, 77);
+  font-size: 14px;
+  
 }
 
 aside section:last-child {
@@ -100,7 +110,7 @@ aside section title {
 }
 
 aside section li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.4rem;
 }
 
 aside section label {
@@ -120,12 +130,12 @@ aside .btn{
 }
 main-content {
   padding: 5rem 1rem;
-  position: relative;
+  position: absolute;
 }
 
 main-content input {
   padding: 1rem;
-  width: 100%;
+  width: 85%;
   position: relative;
   font-size: 1rem;
 }
@@ -134,11 +144,11 @@ main-content .filters {
   display: flex;
   margin-top: 1rem;
   gap: 1rem;
-  width: 100%;
+  width: 85%;
 }
 
 main-content .filter {
-  width:19%;
+  width:18%;
   text-align: center;
   padding: 0.5rem 1rem;
   border: 1px solid black;
@@ -164,20 +174,26 @@ main-content section title {
 main-content .items {
   height: auto;
   display: flex;
-  /* flex-wrap: wrap; */
   width:auto;
-  overflow-x:scroll;
+  overflow-x: auto;
+  overflow-y: scroll;
   padding: 1rem ;
   gap: 1rem;
+}
+.items::-webkit-scrollbar {
+  display:none; /* Fallback for webkit-based browsers (optional) */
 }
 .item {
   width: 242px;
   height: 500px;
-  border: 1px solid black;
+  border: 1px solid rgb(233, 233, 233);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
 }
+
 img{
   width:238px;
   height:260px;
